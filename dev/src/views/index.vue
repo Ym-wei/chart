@@ -1,6 +1,13 @@
 <template>
   <div>
-    dsa
+    <div
+      v-for="(item, index) in chartTypeList"
+      :key="index"
+      class="type-item"
+      @click="jump(item)"
+    >
+      {{ item.name }}
+    </div>
   </div>
 </template>
 
@@ -10,12 +17,43 @@
     name: 'index',
     props: {},
     data() {
-      return {}
+      return {
+        chartTypeList: [
+          {
+            type: 'line',
+            name: '折线图'
+          },
+          {
+            type: 'pie',
+            name: '柱状图'
+          },
+          {
+            type: 'pie2',
+            name: '饼图'
+          }
+        ]
+      }
     },
-    methods: {}
+    methods: {
+      jump({ type }) {
+        this.$router.push({
+          path: `/${type}`
+        })
+      }
+    }
   }
 </script>
 
 <style lang="scss">
-
+.type-item {
+  width: 80%;
+  height: 50px;
+  background-color: #3A55B5;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
