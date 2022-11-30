@@ -19,6 +19,10 @@ const routes = [
   {
     path: '/pie2',
     component: () => import(/* webpackChunkName: "pie2" */ '../views/chart/pie2.vue')
+  },
+  {
+    path: '/gauge',
+    component: () => import(/* webpackChunkName: "gauge" */ '../views/chart/gauge.vue')
   }
 ]
 

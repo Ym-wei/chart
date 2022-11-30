@@ -30,6 +30,10 @@
           {
             type: 'pie2',
             name: '饼图'
+          },
+          {
+            type: 'gauge',
+            name: '仪表盘'
           }
         ]
       }
