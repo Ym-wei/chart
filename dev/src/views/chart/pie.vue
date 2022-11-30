@@ -10,6 +10,7 @@
     <pie-8/>
     <pie-9/>
     <pie-10/>
+    <pie-11/>
   </div>
 </template>
 
@@ -25,7 +26,7 @@
       pie7: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie7'),
       pie8: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie8'),
       pie9: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie9'),
-      pie10: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie10')
+      pie11: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie11')
     },
     props: {},
     data() {
