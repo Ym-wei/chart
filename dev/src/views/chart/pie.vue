@@ -1,16 +1,9 @@
 <template>
   <div>
-    <pie-1/>
-    <pie-2/>
-    <pie-3/>
-    <pie-4/>
-    <pie-5/>
-    <pie-6/>
-    <pie-7/>
-    <pie-8/>
-    <pie-9/>
-    <pie-10/>
-    <pie-11/>
+    <div v-for="index in chartNumber" :key="index">
+      <div>图表 {{ index +1 }}</div>
+      <components :is="`pie${index+1}`"></components>
+    </div>
   </div>
 </template>
 
@@ -26,11 +19,15 @@
       pie7: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie7'),
       pie8: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie8'),
       pie9: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie9'),
-      pie11: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie11')
+      pie10: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie10'),
+      pie11: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie11'),
+      pie12: () => import(/* webpackChunkName: "pie" */ '@/components/pie/pie12')
     },
     props: {},
     data() {
-      return {}
+      return {
+        chartNumber: 11
+      }
     },
     methods: {}
   }
