@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="type-item" @click="jump({ type: 'pikpak' })">Pikpak</div>
+    <div class="type-item" @click="jump({ type: 'pikpak' })">Pikpak1</div>
     <div
       v-for="(item, index) in chartTypeList"
       :key="index"
